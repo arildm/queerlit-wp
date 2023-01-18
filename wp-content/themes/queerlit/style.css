@@ -9,3 +9,12 @@ License:      GNU General Public License v2 or later
 License URI:  https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 Text Domain:  queerlit
 */
+
+:root {
+  --global--font-primary: "Barlow Condensed", "Arial Condensed", sans-serif;
+  --global--font-secondary: var(--global--font-primary);
+}
+
+.powered-by {
+  display: none;
+}
