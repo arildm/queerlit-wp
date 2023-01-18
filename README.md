@@ -17,5 +17,5 @@ Info pages for https://queerlit.dh.gu.se/
 Do something like:
 
 ```
-rsync -az index.php wp/ cdh03:/var/www/queerlit/om/wp/
+rsync -az index.php wp-config.php wp wp-content cdh03:/var/www/queerlit/om/
 ```

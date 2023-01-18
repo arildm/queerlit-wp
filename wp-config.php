@@ -2,11 +2,11 @@
 $table_prefix = 'wpql_';
 
 // Keep plugin/theme code dir outside WP core.
-define('WP_CONTENT_DIR', $_SERVER['DOCUMENT_ROOT'] . '/wp-content');
+define('WP_CONTENT_DIR', __DIR__ . '/wp-content');
 
 // Load local-environment settings: database, url etc.
-if (file_exists($_SERVER['DOCUMENT_ROOT'] . '/wp-config-local.php')) {
-  require($_SERVER['DOCUMENT_ROOT'] . '/wp-config-local.php');
+if (file_exists(__DIR__ . '/wp-config-local.php')) {
+  require(__DIR__ . '/wp-config-local.php');
 }
 
 // Finish setting variables after loading local settings.
