@@ -13,8 +13,59 @@ Text Domain:  queerlit
 :root {
   --global--font-primary: "Barlow Condensed", "Arial Condensed", sans-serif;
   --global--font-secondary: var(--global--font-primary);
+
+  --global--color-background: #b5c0bd;
+  --global--color-primary: #2c3e50;
+  --global--color-secondary: var(--global--color-primary);
+  --button--color-background: var(--global--color-primary);
+  --button--color-text-hover: var(--global--color-primary);
+
+  --primary-nav--padding: 1rem;
 }
 
 .powered-by {
   display: none;
+}
+
+.primary-navigation a {
+  padding: 0.25rem var(--primary-nav--padding);
+}
+
+.primary-navigation > div > .menu-wrapper .sub-menu-toggle {
+  height: auto;
+}
+
+@media only screen and (min-width: 482px) {
+  .primary-navigation > div > .menu-wrapper > li > .sub-menu:before,
+  .primary-navigation > div > .menu-wrapper > li > .sub-menu:after {
+    display: none;
+  }
+
+  .primary-navigation > div > .menu-wrapper > li {
+    margin-left: .25rem;
+  }
+}
+
+.primary-navigation .current-menu-item > a:first-child,
+.primary-navigation .current_page_item > a:first-child {
+  text-decoration: none;
+}
+
+.primary-navigation a:hover,
+.primary-navigation .current-menu-item > a:first-child:hover,
+.primary-navigation .current_page_item > a:first-child:hover {
+  background-color: rgba(255 255 255 / .25);
+  border-radius: 0.5rem;
+  text-decoration: none;
+}
+
+.current_page_item {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, .1), 0 4px 6px -2px rgba(0, 0, 0, .05);
+}
+
+.primary-navigation .sub-menu .menu-item > a {
+  padding: 0.25rem var(--primary-nav--padding);
+  margin: .5rem .25rem;
 }
