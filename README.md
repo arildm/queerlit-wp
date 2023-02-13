@@ -19,3 +19,5 @@ Do something like:
 ```
 rsync -az index.php wp-config.php wp wp-content cdh03:/var/www/queerlit/om/
 ```
+
+Make sure `wp-content/uploads` uses the `httpd_sys_rw_content_t` SELinux context, is group-owned by `apache` and has group write privilege.
