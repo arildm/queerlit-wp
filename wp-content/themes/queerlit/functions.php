@@ -8,3 +8,11 @@ function queerlit_enqueue_styles() {
 
   wp_enqueue_style( 'queerlit-external', 'https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&display=swap', false );
 }
+
+/** @see get_custom_logo() */
+add_filter('get_custom_logo', 'queerlit_get_custom_logo');
+function queerlit_get_custom_logo($html) {
+  $home_url = 'https://queerlit.dh.gu.se/';
+  $html = preg_replace('/href="[^"]*"/', 'href="' . $home_url . '"', $html);
+  return $html;
+}
